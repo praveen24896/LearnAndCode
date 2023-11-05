@@ -1,9 +1,8 @@
-
-class EmailEntity {
+public class EmailEntity {
     private String emailId;
-    private String source;
+    private EmailSource source;
 
-    public EmailEntity(String emailId, String emailSource) {
+    public EmailEntity(String emailId, EmailSource emailSource) {
         this.emailId = emailId;
         this.source = emailSource;
     }
@@ -12,11 +11,7 @@ class EmailEntity {
         return emailId;
     }
 
-    public String getSource() {
+    public EmailSource getSource() {
         return source;
     }
-}
-
-enum EmailSource {
-    GMAIL, OUTLOOK, YAHOO
 }
